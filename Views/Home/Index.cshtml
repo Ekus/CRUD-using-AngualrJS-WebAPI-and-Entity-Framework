@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html ng-app="customersApp">  
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>CRUD App using AngularJS</title>  
+
+        <link href="~/Content/css/ng-grid.min.css" rel="stylesheet" />
+        <link href="~/Content/css/style.css" rel="stylesheet" />
+        <script src="~/Scripts/js/jquery-1.10.1.min.js"></script>
+        <script src="~/Scripts/js/angular.min.js"></script>
+        <script src="~/Scripts/js/ng-grid.min.js"></script>
+        <script src="~/Scripts/Common/common.js"></script>
+    </head>
+    <body ng-controller="customerCtrl">
+        <div class="gridStyle" ng-grid="gridOptions"></div>
+
+     <form name="myForm">
+     <b> {{action | uppercase}} </b>
+      </br>
+       <span> <b>Customer Details</b></span>
+        <table>
+             <tr> <td>Id </td> 
+                <td> <input type="text" ng-model="New.id" />*(PLEASE ENTER UNIQUE ID)</td>
+            </tr>
+            <tr> <td>Name</td>
+                <td> <input type="text" ng-model="New.name" /></td>
+            </tr>
+            <tr>
+                 <td>City</td>
+                <td> <input type="text" ng-model="New.city" /></td>
+            </tr>
+             <tr>
+                 <td>Address</td>
+                <td> <input type="text" ng-model="New.address" /></td>
+            </tr>
+            <tr>
+                 <td>Contact No</td>
+                <td> <input type="text" ng-model="New.contactNo" /></td>
+            </tr>
+             <tr>
+                 <td>Email-Id</td>
+                <td> <input type="text" ng-model="New.emailId" /></td>
+            </tr>
+           
+        </table>
+        <input id="Submit1"  ng-click="update()" type="submit" value="submit" />
+       </form>
+    </body>
+</html>
